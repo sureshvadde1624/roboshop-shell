@@ -16,7 +16,9 @@ fi
 status_check $?
 
 print_head "Creating Application Directory"
-mkdir /app &>>${log_file}
+if [ ! -d /app ]; then   #-d checks directory exist or not.
+  mkdir /app &>>${log_file}
+fi
 status_check $?
 
 print_head "Removing Old Content"
