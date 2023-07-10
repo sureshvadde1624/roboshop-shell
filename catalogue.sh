@@ -16,7 +16,7 @@ fi
 status_check $?
 
 print_head "Creating Application Directory"
-if [ ! -d /app ]; then   #-d checks directory exist or not.
+if [ ! -d /app ]; then   #-d checks directory exist or not. -d /app gives true if dir exist.
   mkdir /app &>>${log_file}
 fi
 status_check $?
