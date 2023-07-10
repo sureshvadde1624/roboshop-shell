@@ -1,3 +1,5 @@
+code_dir=$(pwd)
+
 echo -e "\e[35mInstalling nginx\e[0m"
 yum install nginx -y
 
@@ -12,7 +14,7 @@ cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 
 echo -e "\e[35mCoping nginx Config for Roboshop\e[0m"
-cp configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf
+cp ${code_dir}/configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 echo -e "\e[35menabling nginx\e[0m"
 systemctl enable nginx
