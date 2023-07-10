@@ -28,3 +28,6 @@ systemctl enable nginx &>>${log_file}
 print_head "starting nginx"
 systemctl restart nginx &>>${log_file}
 
+
+# If any command is errored or failed, we need to stop the script.
+# status of a command need to be printed.
